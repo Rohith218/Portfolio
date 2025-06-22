@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    /* background-color: white; */
+    z-index: 1000;
+}
+
+.righth,
+.lefth {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 40px;
+    margin-top: 20px;
+
+}
+
+.home,
+.about,
+.services,
+.pf,
+.contact {
+    padding: 20px 15px 0px 15px;
+    color: black;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.home h2 {
+    border-bottom: 3px solid black;
+    border-width: 4px;
+    padding-bottom: 10px;
+}
+
+.rt {
+    padding: 0px 15px 0px 15px;
+    color: black;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+}
+
+.rt .c {
+    background-color: black;
+    color: white;
+    padding: 0px 4px 0px 4px;
+    border-radius: 10px;
+    letter-spacing: 1.5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.con {
+    margin: 0;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.con h1 {
+    font-size: 80px;
+}
+
+/* .home :hover,
+.about :hover,
+.services :hover,
+.pf :hover,
+.contact :hover {
+    color: white;
+    background-color: black;
+    border-radius: 12px;
+    /* border-bottom: 18px solid black;
+    padding-bottom: 10px; */
+/* transition: border-bottom 5.3s ease-in-out; */
+/* } */
+*/
+/* .home h2:hover,
+.about h2:hover,
+.services h2:hover,
+.pf h2:hover,
+.contact h2:hover {
+    color: white;
+    background-color: black;
+    border-radius: 12px;
+    border-bottom: 18px solid black;
+    padding-bottom: 10px;
+    transition: border-bottom 4.3s step-start;
+} */
