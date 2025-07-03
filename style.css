@@ -199,6 +199,9 @@ ul{
 .centerwrap {
     opacity: 0;
     transform: translateY(100px);
+    
+}
+.centerwrap.active {
     animation: slideInUp 1s ease-out forwards;
 }
 
@@ -212,19 +215,22 @@ ul{
   height: 100%;
   background-color: black;
   width: 0%;
-  animation: fillAnim 2s ease forwards;
+  transition: width 0.3s ease;
   border-radius: 5px;
 }
+.fill.active{
+ animation: fillAnim 2s ease forwards;
+}
 
-/* Different widths based on skill level */
+/* Different widths based on skill level
 .java    { width: 85%; }
 .web     { width: 65%; }
 .aws     { width: 60%; }
 .python  { width: 70%; }
-.sel  { width: 75%; }
+.sel  { width: 75%; } */
 
 @keyframes fillAnim {
-  from { width: 0%; }
+  to { width: var(--target-width); }
 }
 .a2details p{
     /* max-height: 550px; */
@@ -266,3 +272,67 @@ ul{
             opacity: 1;
         }
     }
+.works{
+    margin-top: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* gap: 10px; */
+    margin-bottom: 300px;
+    gap: 20px;
+    /* padding: 0px 200px; */
+    /* padding-left: 20px;
+    padding-right: 20px; */
+}
+
+.ablock, .bblock, .cblock,.dblock {
+    height: 250px;
+    width: 250px;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.7s ease, color 0.7s ease, box-shadow 0.7s ease;
+}
+
+.ablock h3, .bblock h3, .cblock h3,.dblock h3 {
+    transform: translateY(40px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.ablock p, .bblock p, .cblock p,.dblock p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.ablock:hover, .bblock:hover, .cblock:hover, .dblock:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 0px 10px 15px grey;
+}
+
+.ablock:hover h3, .bblock:hover h3, .cblock:hover h3,.dblock:hover h3,
+.ablock:hover p, .bblock:hover p, .cblock:hover p,.dblock:hover p {
+    opacity: 1;
+    transform: translateY(0);
+}
+.doing{
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    max-width: auto;
+    font-family: 'Unbounded', sans-serif;
+}
+.works a{
+    text-decoration: none;
+    color: black;
+}
