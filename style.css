@@ -394,7 +394,12 @@ ul {
     max-width: auto;
     font-family: 'Unbounded', sans-serif;
 }
-
+.works{
+    width: 100vw;
+    overflow: hidden;
+    padding: 20px 0px;
+    flex-wrap: wrap;
+}
 .works a {
     text-decoration: none;
     color: black;
@@ -418,6 +423,7 @@ ul {
 .c212{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 .c212 .form-group{
     margin-bottom: 30px;
@@ -471,6 +477,7 @@ ul {
     border-radius: 8px;
     border: 1px solid white;
     cursor: pointer;
+    box-shadow: 2px 2px 6px rgba(255,255,255,0.8);
 }
 .projects{
     margin-top: 20px;
