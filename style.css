@@ -395,9 +395,9 @@ ul {
     font-family: 'Unbounded', sans-serif;
 }
 .works{
-    width: 100vw;
-    overflow: hidden;
-    padding: 20px 0px;
+    /* width: 100vw; */
+    /* overflow: hidden;
+    padding: 20px 0px; */
     flex-wrap: wrap;
 }
 .works a {
