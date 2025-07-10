@@ -682,6 +682,10 @@ ul {
     .c211p {
         display: none;
     }
+    .doing h1{
+        margin-top: 80px;
+        font-size: 25px;
+     }
     /* .centerwrap{
         margin-top: 260px;
         top: 0;
@@ -795,7 +799,7 @@ ul {
         margin-bottom: 100px;
     }
     .doing h1{
-        margin-top: 40px;
+        margin-top: 80px;
         font-size: 25px;
      }
      .footer span{
