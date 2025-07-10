@@ -472,7 +472,7 @@ ul {
     color: white;
     padding: 4px;
     border-radius: 8px;
-    border: 1px solid black;
+    border: 1px solid transparent;
     transition: border 0.5s ease, border-radius 0.5s ease 1s;
 }
 
