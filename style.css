@@ -577,6 +577,7 @@ ul {
     }
 
     .centerwrap{
+        margin-top: 20px;
         top: 0;
         z-index: 100;
     }
@@ -674,6 +675,7 @@ ul {
         display: none;
     }
     .centerwrap{
+        margin-top: 20px;
         top: 0;
         z-index: 100;
     }
