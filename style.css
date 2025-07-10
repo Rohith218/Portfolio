@@ -636,7 +636,7 @@ ul {
     }
 
     .con .name h1 {
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .about1 {
@@ -741,7 +741,10 @@ ul {
     }
 
     .con .name h1 {
-        font-size: 35px;
+        font-size: 20px;
+    }
+    .con .desc p {
+        font-size: 10px;
     }
 
     .about1 {
@@ -792,7 +795,7 @@ ul {
         margin-bottom: 100px;
     }
     .doing h1{
-        margin-top: 20px;
+        margin-top: 40px;
         font-size: 25px;
      }
      .footer span{
