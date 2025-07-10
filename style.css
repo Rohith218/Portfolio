@@ -582,6 +582,9 @@ ul {
         z-index: 100;
         margin-bottom: 260px;
     }
+    .doing{
+        margin-top: 60px;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -680,5 +683,8 @@ ul {
         top: 0;
         z-index: 100;
         margin-bottom: 260px;
+    }
+    .doing{
+        margin-top: 60px;
     }
 }
