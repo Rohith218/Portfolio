@@ -11,6 +11,7 @@
 }
 
 .header {
+    /* width: 100vw; */
     display: flex;
     justify-content: space-between;
     position: sticky;
@@ -18,17 +19,19 @@
     z-index: 1000;
     background-color: white;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
 }
 
 .righth,
 .lefth {
     display: flex;
     flex-direction: row;
-    padding: 20px 40px;
+    padding: 20px 20px;
+    flex-wrap: wrap;
 }
 
-.righth{
-    margin-top: 20px;
+.righth {
+    align-items: center;
     gap: 32px;
 }
 
@@ -36,73 +39,64 @@
 .about11,
 .services1,
 .pf1,
-.contact1{
+.contact1 {
     color: black;
     font-size: 20px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
 }
-.home,
-.about,
-.services,
-.pf,
-.contact{
-    display: inline-block;
-}
-.h-b{
-    width: 100%;
-    height: 2px;
+
+.h-b {
+    width: 0%;
+    height: 3px;
     background-color: black;
     opacity: 0;
 }
+
 .home:hover .h-b,
 .about:hover .h-b,
 .services:hover .h-b,
 .pf:hover .h-b,
-.contact:hover .h-b{
-    animation: line 0.7s ease forwards;
+.contact:hover .h-b {
+    animation: line 0.5s ease forwards;
 }
-@keyframes line{
-    from{
-        opacity: 1;
-        width: 0px;
-    }
-    to{
+
+@keyframes line {
+    to {
         opacity: 1;
         width: 100%;
     }
 }
+
 .rt {
-    padding: 0px 15px 0px 15px;
     color: black;
-    font-size: 22px;
-    letter-spacing: 1.5px;
+    font-size: 20px;
 }
 
-.rt .c {
+.rt .name,
+.rt .io {
     background-color: black;
     color: white;
-    padding: 0px 4px 0px 4px;
+    padding: 0px 8px 0px 8px;
     border-radius: 10px 0px 0px 15px;
     letter-spacing: 1.5px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.9s ease, color 0.9s ease;
 }
 
-.rt:hover .c {
+.rt:hover .name {
     background-color: white;
     color: black;
 }
 
-.rt .b {
-    padding: 0px 4px 0px 4px;
+.rt .io {
     border-radius: 0px 10px 15px 0px;
-    letter-spacing: 1.5px;
+    background-color: white;
+    color: black;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.rt:hover .b {
+.rt:hover .io {
     background-color: black;
     color: white;
 }
@@ -123,7 +117,7 @@ a {
     flex: 1;
 }
 
-.con h1 {
+.con .name h1 {
     font-size: 70px;
     font-family: 'Roboto Mono', monospace;
 }
@@ -394,44 +388,53 @@ ul {
     max-width: auto;
     font-family: 'Unbounded', sans-serif;
 }
-.works{
+
+.works {
     /* width: 100vw; */
     /* overflow: hidden;
     padding: 20px 0px; */
     flex-wrap: wrap;
 }
+
 .works a {
     text-decoration: none;
     color: black;
 }
+
 .c1111 {
     height: 250px;
     align-content: center;
     padding-left: 30px;
     font-size: 50px;
-    background-color:  rgba(192, 192, 192, 0.2);
-    transition: background-color 0.5s ease-in,color 0.5s ease-in;
+    background-color: rgba(192, 192, 192, 0.2);
+    transition: background-color 0.5s ease-in, color 0.5s ease-in;
 }
-.c1111 h4{
+
+.c1111 h4 {
     margin: 20px 0px;
 }
-.c21{
+
+.c21 {
     display: flex;
     flex-direction: row;
     box-shadow: -10px 0 15px rgba(0, 0, 0, 0.3);
 }
-.c212{
+
+.c212 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
-.c212 .form-group{
+
+.c212 .form-group {
     margin-bottom: 30px;
 }
-.c211 h3{
+
+.c211 h3 {
     margin-bottom: 20px;
     font-size: 40px;
 }
+
 .c211 {
     flex: 1;
     display: flex;
@@ -441,6 +444,7 @@ ul {
     padding-left: 25px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
+
 .c212 {
     flex: 2;
     padding: 30px;
@@ -449,49 +453,141 @@ ul {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
     /* padding-bottom: 100px; */
 }
+
 .footer {
     /* margin-top: 20px; */
-  height: 100px;
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  box-shadow: -10px 0 15px rgba(0, 0, 0, 0.4);
-  font-size: 20px;
-  font-weight: 300;
-  background-color: black; /* Add this */
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: -10px 0 15px rgba(0, 0, 0, 0.4);
+    font-size: 20px;
+    font-weight: 300;
+    background-color: black;
+    /* Add this */
 }
-.footer  div a{
+
+.footer div a {
     color: white;
     padding: 4px;
     border-radius: 8px;
     border: 1px solid black;
-    transition: border 0.5s ease,border-radius 0.5s ease 1s;
+    transition: border 0.5s ease, border-radius 0.5s ease 1s;
 }
-.insta:hover  a
-,.link:hover  a,
-.fac:hover  a,
-.twit:hover  a,
-.dis:hover  a
-{
+
+.insta:hover a,
+.link:hover a,
+.fac:hover a,
+.twit:hover a,
+.dis:hover a {
     border-radius: 8px;
     border: 1px solid white;
     cursor: pointer;
-    box-shadow: 2px 2px 6px rgba(255,255,255,0.8);
+    box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8);
 }
-.projects{
+
+.projects {
     margin-top: 20px;
     display: flex;
     max-width: 100vw;
     overflow-x: hidden;
     gap: 0px;
 }
-.p1,.p2,.p3,.p4{
+
+.p1,
+.p2,
+.p3,
+.p4 {
     display: flex;
     flex-direction: row;
     flex: 1;
 }
-.p1 img ,.p2 img ,.p3 img ,.p4 img{
+
+.p1 img,
+.p2 img,
+.p3 img,
+.p4 img {
     width: 400px;
     height: 400px;
+}
+@media screen and (min-width:641px) and (max-width:800px){
+    *{
+        transition: all 5s ease forwards;
+    }
+    .con2 img {
+    position: relative;
+    top: 40px;
+    height: 350px;
+    width: 350px;
+    }
+    .con .name h1{
+        font-size: 35px;
+    }  
+    .con .desc p{
+        font-size: 15px;
+    }
+    .about1{
+        display: flex;
+        flex-direction: row;
+    }
+    .con3{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 250px) and (max-width: 640px) {
+    * {
+        transition: all 0.1s ease forwards;
+    }
+    
+
+    .home,
+    .about,
+    .services,
+    .pf,
+    .contact {
+        display: none;
+    }
+
+    .toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        padding: 8px;
+        border: 3px solid transparent;
+        border-radius: 12px;
+        transition: border 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .toggle:hover {
+        cursor: pointer;
+        border-color: rgba(0, 0, 0, 1);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .toggle span {
+        width: 32px;
+        height: 3px;
+        background-color: black;
+        border-radius: 105px;
+    }
+    .con2 img {
+    position: relative;
+    top: 40px;
+    height: 250px;
+    width: 250px;
+    }
+    .con .name h1{
+        font-size: 35px;
+    }  
+    .about1{
+        display: flex;
+        flex-direction: row;
+    }
+    .con3{
+        display: flex;
+        flex-direction: column;
+    }
 }
