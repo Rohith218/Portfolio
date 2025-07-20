@@ -675,10 +675,10 @@ input[type=Email]:focus,
         width: 200px;
     }
 
-    .webpages {
+    /* .webpages {
         display: flex;
         justify-content: center;
-    }
+    } */
 
     /* .bleft,.bright{ 
         display: none;
@@ -988,10 +988,11 @@ input[type=Email]:focus,
     .footer span {
         display: none;
     }
-    .webpages {
+    /* .webpages {
         display: flex;
         justify-content: center;
-    }
+        
+    } */
 
     /* .centerwrap{
         margin-top: 260px;
