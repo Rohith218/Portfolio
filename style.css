@@ -29,12 +29,15 @@
     padding: 10px 10px;
     flex-wrap: wrap;
 }
-.lefth{
+
+.lefth {
     margin-left: 20px;
 }
+
 .righth {
     gap: 32px;
 }
+
 .home1,
 .about11,
 .services1,
@@ -45,11 +48,13 @@
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
 }
+
 .h-b {
     height: 3px;
     background-color: transparent;
     width: 0%;
 }
+
 .home:hover .h-b,
 .about:hover .h-b,
 .services:hover .h-b,
@@ -60,10 +65,11 @@
 }
 
 @keyframes line {
-    from{
+    from {
         opacity: 0;
         width: 0%;
     }
+
     to {
         opacity: 1;
         width: 100%;
@@ -138,6 +144,7 @@ a {
 
 .centerwrap {
     display: flex;
+    /* height: 100vh; */
     justify-content: center;
     align-items: center;
 }
@@ -501,7 +508,8 @@ ul {
     margin-bottom: 40px;
     scrollbar-width: none;
 }
-.bleft{
+
+.bleft {
     padding: 3px 5px;
     position: sticky;
     background-color: transparent;
@@ -513,7 +521,8 @@ ul {
     border: 1px solid transparent;
     transition: transform 0.3s ease-in;
 }
-.bright{
+
+.bright {
     padding: 3px 5px;
     position: sticky;
     background-color: transparent;
@@ -526,13 +535,14 @@ ul {
     transition: transform 0.3s ease-in;
 }
 
-.bleft:hover,.bright:hover
-{
+.bleft:hover,
+.bright:hover {
     transform: scale(2);
     transition: transform 0.3s ease-in;
     box-shadow: 5 5px 8px rgba(0, 0, 0, 0.2);
-    border: 1px solid black;
-    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    backdrop-filter: blur(30px);
     border-radius: 6px;
 }
 
@@ -572,14 +582,85 @@ ul {
     from {
         width: 360px;
     }
+
     to {
         width: 400px;
     }
 }
-.whead{
+
+.whead {
     display: flex;
     justify-content: center;
     font-family: 'Unbounded', sans-serif;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#Country {
+    width: 100%;
+    outline: none;
+    box-shadow: 0px 10px 15px rgba(192, 192, 192, 0.4);
+    border: 1px solid transparent;
+    padding: 10px;
+    padding-left: 8px;
+    border-radius: 9px;
+}
+
+input[type=text],
+textarea,
+input[type=Email] {
+    outline: none;
+    padding: 10px;
+    padding-left: 8px;
+    width: 100%;
+    border-radius: 9px;
+    box-shadow: 0px 10px 15px rgba(192, 192, 192, 0.2);
+    border: 1px solid transparent;
+    resize: none;
+}
+
+textarea {
+    padding-top: 28px;
+}
+
+/* #Country option:focus {
+  color: rgba(0, 0, 0, 1); 
+  font-style: italic;
+  background-color: black;
+} */
+
+input[type=text]:focus,
+textarea:focus,
+input[type=Email]:focus,
+#Country:focus {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#sbutton {
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#sbutton button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    /* border: 1px solid black; */
+    background-color: white;
+    color: black;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+#sbutton button:hover {
+    background-color: black;
+    color: white;
 }
 
 @media screen and (min-width:641px) and (max-width:800px) {
@@ -593,9 +674,10 @@ ul {
         height: 200px;
         width: 200px;
     }
-    .bleft,.bright{
+
+    /* .bleft,.bright{ 
         display: none;
-    }
+    }  */
 
     .con .name h1 {
         font-size: 35px;
@@ -619,9 +701,10 @@ ul {
         display: flex;
         flex-direction: column;
     }
-    .webpages{
+
+    /* .webpages{
         flex-wrap: wrap;
-    }
+    } */
 
     .footer {
         height: 100px;
@@ -680,9 +763,10 @@ ul {
     .contact {
         display: none;
     }
-    .bleft,.bright{
+
+    /* .bleft,.bright{
         display: none;
-    }
+    } */
 
     .toggle {
         display: flex;
@@ -732,9 +816,10 @@ ul {
         display: flex;
         flex-direction: column;
     }
-    .webpages{
+
+    /* .webpages{
         flex-wrap: wrap;
-    }
+    } */
 
 
     .footer {

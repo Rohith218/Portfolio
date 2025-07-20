@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     lscroll.addEventListener("click", function (e) {
       e.preventDefault();
       scrollCon.scrollBy({
-        left: -200, // scroll LEFT
+        left: -300, // scroll LEFT
         behavior: "smooth"
       });
     });
