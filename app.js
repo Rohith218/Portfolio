@@ -94,4 +94,38 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   fills.forEach(fill => fillObserver.observe(fill));
-});
+
+  const roles = [" Quality Engineer"," Code Curious QA"," Automation Tester"," Tech Enthusiast"];
+  const text = document.querySelector(".typed-text");
+  let rowindex = 0;
+  let charindex = 0;
+  function type(){
+    if(charindex<roles[rowindex].length){
+      text.textContent+=roles[rowindex].charAt(charindex);
+      charindex=charindex+1;
+      setTimeout(type, 200);
+    }else{
+      setTimeout(erase,1500);
+    }
+  }
+  function erase(){
+    if(charindex>=0){
+      text.textContent = "";
+      text.textContent+=roles[rowindex].substring(0,charindex-1);
+      charindex = charindex-1;
+      setTimeout(erase,200);
+    }else{
+      if(rowindex>=roles.length-1){
+        rowindex = 0;
+      }else{
+        rowindex +=1;
+      }
+      setTimeout(type,500);
+    }
+  }
+  if(text){
+    setTimeout(type,0);
+  }
+}
+
+);

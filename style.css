@@ -120,7 +120,19 @@ a {
     flex: 2;
     margin-left: 20px;
 }
-
+.role{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s steps(1) infinite;
+  color: #000;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 .con2 {
     flex: 1;
 }
@@ -832,8 +844,8 @@ input[type=Email]:focus,
     .con2 img {
         position: relative;
         top: 40px;
-        height: 250px;
-        width: 250px;
+        height: 200px;
+        width: 200px;
     }
 
     .con .name h1 {
@@ -953,8 +965,8 @@ input[type=Email]:focus,
     .con2 img {
         position: relative;
         top: 40px;
-        height: 150px;
-        width: 150px;
+        height: 200px;
+        width: 200px;
     }
 
     .con .name h1 {
