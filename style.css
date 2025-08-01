@@ -10,6 +10,75 @@
     font-family: "Figtree", sans-serif;
 }
 
+.intro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    animation: curtain 5s ease-in;
+}
+
+.introa {
+    background-color: black;
+    height: 100vh;
+    width: 50vw;
+}
+
+.introb {
+    background-color: white;
+    height: 100vh;
+    width: 50vw;
+}
+
+.intro h1 {
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+}
+
+.rta {
+    color: black;
+    font-size: 20px;
+    position: absolute;
+}
+
+.rta h1 .io {
+    color: black;
+    background-color: white;
+}
+
+@keyframes curtain {
+    from {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    to {
+        width: 0vw;
+        height: 0vh;
+    }
+}
+
+@keyframes curtaintext {
+    from {
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+    }
+
+    to {
+        width: 0%;
+        background-color: white;
+        color: black;
+    }
+
+    50% {
+        height: 0%;
+    }
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -36,6 +105,17 @@
 
 .righth {
     gap: 32px;
+}
+
+.mainhead {
+    display: flex;
+    flex-direction: column;
+}
+
+.righthexp {
+    /* margin-top: 20px; */
+    display: none;
+    gap: 10px;
 }
 
 .home1,
@@ -732,22 +812,12 @@ input[type=Email]:focus,
         height: 200px;
         width: 200px;
     }
-
-    /* .webpages {
-        display: flex;
-        justify-content: center;
-    } */
-
-    /* .bleft,.bright{ 
-        display: none;
-    }  */
-
     .con .name h1 {
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .con .desc p {
-        font-size: 15px;
+        font-size: 8px;
     }
 
     .role {
@@ -769,10 +839,6 @@ input[type=Email]:focus,
         display: flex;
         flex-direction: column;
     }
-
-    /* .webpages{
-        flex-wrap: wrap;
-    } */
 
     .footer {
         height: 100px;
@@ -803,19 +869,6 @@ input[type=Email]:focus,
         display: none;
     }
 
-    /* .centerwrap{
-        margin-top: 260px;
-        top: 0;
-        z-index: 100;
-        margin-bottom: 260px;
-    }
-    .doing{
-        margin-top: 60px;
-    } */
-    /* .doing h1{
-        margin-top: 20px;
-        font-size: 25px;
-     } */
 }
 
 @media screen and (min-width: 395px) and (max-width: 640px) {
@@ -858,20 +911,31 @@ input[type=Email]:focus,
         background-color: black;
         border-radius: 105px;
     }
+    .righthexp {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 0;
+        z-index: 1000;
+    }
 
     .con2 img {
         position: relative;
-        top: 40px;
-        height: 200px;
-        width: 200px;
+        top: 30px;
+        height: 180px;
+        width: 180px;
     }
 
     .con .name h1 {
-        font-size: 30px;
+        font-size: 20px;
     }
+
     .role {
-        margin-bottom: 10px;
-        font-size: 15px;
+        margin-bottom: 6px;
+        font-size: 12px;
+    }
+    .con .desc p{
+        font-size: 7px;
     }
 
     .about1 {
@@ -927,32 +991,18 @@ input[type=Email]:focus,
         margin-top: 100px;
         font-size: 25px;
     }
-
-    /* .centerwrap{
-        margin-top: 260px;
-        top: 0;
-        z-index: 100;
-        margin-bottom: 260px;
-    }
-    .doing{
-        margin-top: 60px;
-    } */
-    /* .doing h1{
-        margin-top: 20px;
-        font-size: 25px;
-     } */
     .webpages {
         display: flex;
         justify-content: center;
     }
+
+    
 }
 
 @media screen and (max-width: 394px) {
     * {
         transition: all 0.1s ease forwards;
     }
-
-
     .home,
     .about,
     .services,
@@ -992,11 +1042,15 @@ input[type=Email]:focus,
     }
 
     .con .name h1 {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .con .desc p {
-        font-size: 10px;
+        font-size: 7px;
+    }
+
+    .con .role{
+        font-size: 9px;
     }
 
     .about1 {
@@ -1055,20 +1109,11 @@ input[type=Email]:focus,
     .footer span {
         display: none;
     }
-
-    /* .webpages {
+    .righthexp {
+        /* margin-top: 40px; */
         display: flex;
-        justify-content: center;
-        
-    } */
-
-    /* .centerwrap{
-        margin-top: 260px;
+        flex-direction: column;
         top: 0;
-        z-index: 100;
-        margin-bottom: 260px;
+        z-index: 1000;
     }
-    .doing{
-        margin-top: 60px;
-    } */
 }
