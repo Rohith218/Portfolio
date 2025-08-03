@@ -14,14 +14,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggle = document.querySelector(".toggle");
   const side = document.querySelector(".righthexp");
   const righth = document.querySelector(".righth");
+  const head = document.querySelector(".header");
   window.onload = function () {
     window.showSlideBar = function () {
       side.style.display = "flex";
+      head.style.display = "none"
       // toggle.style.display = "none";
     };
 
     window.closeSlideBar = function () {
       side.style.display = "none";
+      head.style.display = "flex"
       // toggle.style.display = "contents";
     };
   };
@@ -55,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     pf1.addEventListener("click", function (e) {
       e.preventDefault();
       side.style.display = "none";
+      head.style.display = "flex"
       window.scrollBy({
         top: 1120,
         left: 0,
@@ -73,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     about11.addEventListener("click", function (e) {
       side.style.display = "none";
+      head.style.display = "flex"
       window.scrollBy({
         top: 570,
         left: 0,
@@ -91,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     contact1.addEventListener("click", function (e) {
       side.style.display = "none";
+      head.style.display = "flex"
       window.scrollBy({
         top: 2100,
         left: 0,
@@ -121,6 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (home1) {
     home1.addEventListener("click", function (e) {
       side.style.display = "none";
+      head.style.display = "flex"
     })
   }
   const centerwrap = document.querySelector(".centerwrap");
