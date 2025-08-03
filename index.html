@@ -44,33 +44,42 @@
                     <div class="h-a"><a href="#" class="contact1">contact</a></div>
                     <div class="h-b"></div>
                 </div>
-                <div class="toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="toggle" onclick="showSlideBar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                        fill="#E0000">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg>
                 </div>
             </div>
         </div>
-        <div class="righthexp">
-            <div class="home">
-                <div class="h-a"><a href="#" class="home1">Home</a></div>
-                <div class="h-b"></div>
-            </div>
-            <div class="about">
-                <div class="h-a"> <a href="#" class="about11">about</a></div>
-                <div class="h-b"></div>
-            </div>
-            <div class="pf">
-                <div class="h-a"><a href="#" class="pf1">Portfolio</a></div>
-                <div class="h-b"></div>
-            </div>
-            <div class="contact">
-                <div class="h-a"><a href="#" class="contact1">contact</a></div>
-                <div class="h-b"></div>
-            </div>
+
+    </div>
+    <div class="righthexp">
+        <div class="close">
+            <button class="close" onclick="closeSlideBar()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px"
+                    fill="#E0000">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg></button>
+        </div>
+        <div class="home1">
+            <div class="h-a"><a href="#" class="home1">Home</a></div>
+            <div class="h-b"></div>
+        </div>
+        <div class="about11">
+            <div class="h-a"> <a href="#" class="about11">about</a></div>
+            <div class="h-b"></div>
+        </div>
+        <div class="pf1">
+            <div class="h-a"><a href="#" class="pf1">Projects</a></div>
+            <div class="h-b"></div>
+        </div>
+        <div class="contact1">
+            <div class="h-a"><a href="#" class="contact1">contact</a></div>
+            <div class="h-b"></div>
         </div>
     </div>
-
     <div class="con1">
         <div class="con">
             <div class="name">
@@ -124,7 +133,7 @@
                     </div>
                 </div>
                 <div class="a13">
-                    <H3><b>Skills</b></H3>
+                    <H2>Skills</H2>
                     <ul>
                         <ul class="skills">
                             <li class="c1">
@@ -134,7 +143,7 @@
                                 </div>
                             </li>
                             <li class="c1">
-                                <div class="s1">HTML, CSS, JS</div>
+                                <div class="s1">Web Dev</div>
                                 <div class="bar">
                                     <div class="fill web" style="--target-width: 65%"></div>
                                 </div>
@@ -157,7 +166,6 @@
                                     <div class="fill sel" style="--target-width: 70%"></div>
                                 </div>
                             </li>
-
                         </ul>
                     </ul>
                 </div>
@@ -167,18 +175,18 @@
                     <h2>About Me</h2>
                 </div>
                 <div class="a2details">
-                    <p>With nearly 3 years of QA experience, I have worked extensively in the healthcare domain,
+                    <p>With nearly 3 years of QA experience, I have worked in the healthcare domain,
                         contributing to the validation of EDI workflows, claims processing (837), and ensuring
                         compliance with industry standards. I have hands-on experience in automating desktop
-                        applications using Winium, alongside building robust test scenarios for both UI and backend
-                        validations. My work involved close collaboration with cross-functional teams to uncover
-                        edge-case defects and ensure high test coverage in a complex, regulated environment. I’m driven
-                        by a passion for quality and always strive to build efficient, reliable test strategies that
-                        support long-term product stability.</p>
+                        applications using Winium, alongside maintaing and writing test cases for both UI and backend
+                        validations. My work involved close collaboration with cross-functional teams to get relevant
+                        data for
+                        automation. I’m driven by a passion for quality and always strive to build robust
+                        test strategies that support long-term product stability.</p>
                     <br>
                     <p>
                         My portfolio reflects a mix of real-time project work and personal upskilling initiatives. Each
-                        project showcases my problem-solving mindset, detail-oriented approach, and drive to
+                        project,certication showcases my problem-solving mindset, detail-oriented approach, and drive to
                         continuously evolve as a Quality Engineer.
                     </p>
                 </div>
@@ -231,7 +239,7 @@
             <div class="dblock">
                 <h3>HackerRank</h2>
                     <p class="w1">
-                        Certified by HackerRank in key technical areas including Problem Solving and SQL.
+                        Certified by HackerRank in technical areas including Problem Solving and SQL.
                         Explore my certifications here.
                     </p>
             </div>
@@ -332,5 +340,6 @@
         <div class="twit"><a href="https://x.com" target="/_blank">twitter<span>𝕏</span></a></div>
     </div>
 </body>
+
 
 </html>

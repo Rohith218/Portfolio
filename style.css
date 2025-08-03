@@ -107,15 +107,48 @@
     gap: 32px;
 }
 
+.toggle {
+    display: none;
+}
+
 .mainhead {
     display: flex;
     flex-direction: column;
 }
 
 .righthexp {
-    /* margin-top: 20px; */
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.05);
+    z-index: 1000;
     display: none;
-    gap: 10px;
+    gap: 30px;
+    flex-direction: column;
+    padding-top: 70px;
+    backdrop-filter: blur(12px);
+}
+
+.righthexp button {
+    background-color: transparent;
+    font-size: 30px;
+}
+
+.righthexp a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    gap: 100px;
+}
+
+.close {
+    position: absolute;
+    top: 2.5%;
+    left: 87%;
+    font-size: 20px;
 }
 
 .home1,
@@ -206,6 +239,10 @@ a {
     font-size: 20px;
 }
 
+.righthexp {
+    display: none;
+}
+
 .cursor {
     display: inline-block;
     animation: blink 0.7s steps(1) infinite;
@@ -247,7 +284,6 @@ a {
 
 .centerwrap {
     display: flex;
-    /* height: 100vh; */
     justify-content: center;
     align-items: center;
 }
@@ -256,8 +292,22 @@ a {
     display: flex;
     flex-direction: row;
     height: auto;
-    width: 1050px;
+    width: 1000px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.a12 {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.doing h1 {
+    font-size: 25px;
+    transform: translateY(60px);
+    animation: slideInUp 1s ease-out forwards;
 }
 
 .img12 {
@@ -268,8 +318,8 @@ a {
 
 .about1,
 .about2 {
-    padding: 20px 20px;
     flex: 1;
+    padding: 20px;
 }
 
 .about1 {
@@ -281,18 +331,9 @@ a {
     padding-bottom: 20px;
 }
 
-.a121,
-.a122 {
-    padding: 10px;
-}
-
 .a12 {
     display: flex;
     flex-direction: row;
-}
-
-.a122 {
-    padding: 40px 0px 40px 10px;
 }
 
 ul {
@@ -300,20 +341,10 @@ ul {
     line-height: 30px;
 }
 
-.a13 {
-    padding-top: 20px;
-    padding-left: 20px;
-}
-
-.a13 h3 {
-    padding-bottom: 10px;
-}
-
 .a2h h2 {
     display: inline-block;
     border-bottom: 3px solid black;
 }
-
 
 .a13 {
     font-family: sans-serif;
@@ -335,7 +366,7 @@ ul {
 }
 
 .centerwrap {
-    opacity: 1;
+    opacity: 0;
     transform: translateY(100px);
 
 }
@@ -618,7 +649,7 @@ ul {
     background-color: transparent;
     position: sticky;
     left: 0;
-    z-index: 1000;
+    z-index: 700;
     cursor: pointer;
     transform: scale(1);
     border: 1px solid transparent;
@@ -631,7 +662,7 @@ ul {
     background-color: transparent;
     position: sticky;
     right: 0;
-    z-index: 1000;
+    z-index: 700;
     cursor: pointer;
     transform: scale(1);
     border: 1px solid transparent;
@@ -806,28 +837,23 @@ input[type=Email]:focus,
         transition: all 5s ease forwards;
     }
 
-    .con2 img {
-        position: relative;
-        top: 40px;
-        height: 200px;
-        width: 200px;
-    }
     .con .name h1 {
         font-size: 30px;
     }
 
     .con .desc p {
-        font-size: 8px;
+        font-size: 10px;
     }
 
     .role {
         margin-bottom: 10px;
-        font-size: 15px;
+        font-size: 18px;
     }
 
-    .about1 {
-        display: flex;
-        flex-direction: row;
+    .con2 img {
+        z-index: 500;
+        height: 200px;
+        width: 200px;
     }
 
     .con3 {
@@ -835,9 +861,34 @@ input[type=Email]:focus,
         flex-direction: column;
     }
 
-    .a12 {
+    .con3 .a12 {
         display: flex;
-        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .con3 .a121 img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .a13 h2 {
+        margin-bottom: 20px;
+    }
+
+    .about1 {
+        padding-bottom: 0px;
+    }
+
+    .about2 {
+        padding-top: 0px;
+    }
+
+    .a13 h2,
+    .a2h h2 {
+        display: flex;
+        justify-content: center;
+        padding: 7px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.18);
     }
 
     .footer {
@@ -869,6 +920,12 @@ input[type=Email]:focus,
         display: none;
     }
 
+    .doing h1 {
+        font-size: 25px;
+        transform: translateY(40px);
+        animation: slideInUp 1s ease-out forwards;
+    }
+
 }
 
 @media screen and (min-width: 395px) and (max-width: 640px) {
@@ -885,45 +942,15 @@ input[type=Email]:focus,
         display: none;
     }
 
-    /* .bleft,.bright{
-        display: none;
-    } */
-
     .toggle {
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-        padding: 8px;
-        border: 3px solid transparent;
-        border-radius: 12px;
-        transition: border 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .toggle:hover {
-        cursor: pointer;
-        border-color: rgba(0, 0, 0, 1);
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .toggle span {
-        width: 32px;
-        height: 3px;
-        background-color: black;
-        border-radius: 105px;
-    }
-    .righthexp {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        top: 0;
-        z-index: 1000;
+        display: contents;
     }
 
     .con2 img {
-        position: relative;
         top: 30px;
         height: 180px;
         width: 180px;
+        z-index: 500;
     }
 
     .con .name h1 {
@@ -934,13 +961,9 @@ input[type=Email]:focus,
         margin-bottom: 6px;
         font-size: 12px;
     }
-    .con .desc p{
-        font-size: 7px;
-    }
 
-    .about1 {
-        display: flex;
-        flex-direction: row;
+    .con .desc p {
+        font-size: 7px;
     }
 
     .con3 {
@@ -948,15 +971,35 @@ input[type=Email]:focus,
         flex-direction: column;
     }
 
-    .a12 {
+    .con3 .a12 {
         display: flex;
-        flex-direction: column;
+        justify-content: space-around;
     }
 
-    /* .webpages{
-        flex-wrap: wrap;
-    } */
+    .con3 .a121 img {
+        width: 150px;
+        height: 150px;
+    }
 
+    .a13 h2 {
+        margin-bottom: 20px;
+    }
+
+    .about1 {
+        padding-bottom: 0px;
+    }
+
+    .about2 {
+        padding-top: 0px;
+    }
+
+    .a13 h2,
+    .a2h h2 {
+        display: flex;
+        justify-content: center;
+        padding: 7px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+    }
 
     .footer {
         height: 100px;
@@ -988,21 +1031,28 @@ input[type=Email]:focus,
     }
 
     .doing h1 {
-        margin-top: 100px;
         font-size: 25px;
+        transform: translateY(40px);
+        animation: slideInUp 1s ease-out forwards;
     }
+
     .webpages {
         display: flex;
         justify-content: center;
     }
-
-    
 }
 
 @media screen and (max-width: 394px) {
     * {
         transition: all 0.1s ease forwards;
     }
+
+    .img12 {
+        height: 150px;
+        width: 150px;
+        border-radius: 100%;
+    }
+
     .home,
     .about,
     .services,
@@ -1039,18 +1089,20 @@ input[type=Email]:focus,
         top: 40px;
         height: 200px;
         width: 200px;
+        z-index: 100;
     }
 
     .con .name h1 {
-        font-size: 15px;
+        font-size: 22px;
     }
 
     .con .desc p {
-        font-size: 7px;
+        font-size: 8px;
     }
 
-    .con .role{
-        font-size: 9px;
+    .con .role {
+        margin-top: 3px;
+        font-size: 12px;
     }
 
     .about1 {
@@ -1064,8 +1116,49 @@ input[type=Email]:focus,
     }
 
     .a12 {
+        flex: 1.15;
         display: flex;
         flex-direction: column;
+    }
+
+    .a13 {
+        flex: 1.85;
+        margin-top: 20px;
+    }
+
+    .a13 h2 {
+        display: flex;
+        font-size: 18px;
+        justify-content: center;
+    }
+
+    .a121 img {
+        margin-top: 20px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+    .a122 li {
+        font-size: 11px;
+    }
+
+    .s1 {
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about1 {
+        padding-bottom: 0px;
+    }
+
+    .about2 {
+        padding-top: 0px;
+    }
+
+    .about2 {
+        font-size: 10px;
     }
 
     .footer {
@@ -1097,23 +1190,20 @@ input[type=Email]:focus,
         display: none;
     }
 
-    .con1 {
-        margin-bottom: 100px;
-    }
-
     .doing h1 {
-        margin-top: 100px;
+        /* margin-top: 100px; */
         font-size: 25px;
     }
 
     .footer span {
         display: none;
     }
-    .righthexp {
-        /* margin-top: 40px; */
-        display: flex;
-        flex-direction: column;
-        top: 0;
-        z-index: 1000;
+
+    .whead {
+        font-size: 15px;
     }
+
+    /* .header{
+        display: none;
+    } */
 }
