@@ -1,22 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
   const about = document.querySelector(".about");
+  const about11 = document.querySelector(".about11q");
   const home = document.querySelector(".home");
+  const home1 = document.querySelector(".home1q");
   const rt = document.querySelector(".rt");
   const pf = document.querySelector(".pf");
+  const pf1 = document.querySelector(".pf1q");
+  const contact = document.querySelector(".contact1");
+  const contact1 = document.querySelector(".contact1q");
   const lscroll = document.querySelector(".bleft");
   const rscroll = document.querySelector(".bright");
   const scrollCon = document.querySelector(".webpages");
   const toggle = document.querySelector(".toggle");
   const side = document.querySelector(".righthexp");
+  const righth = document.querySelector(".righth");
   window.onload = function () {
     window.showSlideBar = function () {
       side.style.display = "flex";
-      toggle.style.display = "none";
+      // toggle.style.display = "none";
     };
 
     window.closeSlideBar = function () {
       side.style.display = "none";
-      toggle.style.display = "contents";
+      // toggle.style.display = "contents";
     };
   };
   if (lscroll) {
@@ -37,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
-  if (pf) {
+  if (pf || pf1) {
     pf.addEventListener("click", function (e) {
       e.preventDefault();
       window.scrollBy({
@@ -46,11 +52,47 @@ document.addEventListener("DOMContentLoaded", function () {
         behavior: "smooth"
       });
     });
+    pf1.addEventListener("click", function (e) {
+      e.preventDefault();
+      side.style.display = "none";
+      window.scrollBy({
+        top: 1120,
+        left: 0,
+        behavior: "smooth"
+      });
+    });
   }
-  if (about) {
+  if (about || about11) {
     about.addEventListener("click", function (e) {
+      side.style.display = "none";
       window.scrollBy({
         top: 570,
+        left: 0,
+        behavior: "smooth"
+      });
+    });
+    about11.addEventListener("click", function (e) {
+      side.style.display = "none";
+      window.scrollBy({
+        top: 570,
+        left: 0,
+        behavior: "smooth"
+      });
+    });
+  }
+  if (contact || contact1) {
+    contact.addEventListener("click", function (e) {
+      side.style.display = "none";
+      window.scrollBy({
+        top: 2100,
+        left: 0,
+        behavior: "smooth"
+      });
+    });
+    contact1.addEventListener("click", function (e) {
+      side.style.display = "none";
+      window.scrollBy({
+        top: 2100,
         left: 0,
         behavior: "smooth"
       });
@@ -76,6 +118,11 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+  if (home1) {
+    home1.addEventListener("click", function (e) {
+      side.style.display = "none";
+    })
+  }
   const centerwrap = document.querySelector(".centerwrap");
 
   const observer = new IntersectionObserver((entries) => {
@@ -91,8 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (centerwrap) {
     observer.observe(centerwrap);
   }
-
-  // Animate each .fill bar when it enters viewport
   const fills = document.querySelectorAll(".fill");
 
   const fillObserver = new IntersectionObserver((entries) => {
@@ -137,6 +182,30 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   if (text) {
     setTimeout(type, 0);
+  }
+  const name = "Hey!";
+  const name1 = "I'm Rohith!!";
+  let i = 0;
+  const ina = document.querySelector(".introtext");
+  const ina1 = document.querySelector(".introtext1");
+  function type1(element, str, delay) {
+    let i = 0;
+    function typing() {
+      if (i < str.length) {
+        element.textContent += str[i];
+        i++;
+        setTimeout(typing, delay);
+      }
+    }
+    typing();
+  }
+  if (ina) {
+    ina.textContent = "";
+    setTimeout(type1(ina, name, 100), 100);
+  }
+  if (ina1) {
+    ina1.textContent = "";
+     setTimeout(() => type1(ina1, name1, 100), 800);
   }
 }
 
